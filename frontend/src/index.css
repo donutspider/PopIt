@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+.app-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  width: 80%;
+  max-width: 700px;
+}
+
+.category-card {
+  border-radius: 15px;
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.category-emoji {
+  font-size: 2.5rem;
+}
+
+.category-name {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+/* Recommendation Page */
+.recommend-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.recommend-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.recommend-form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 600px;
+}
+
+.preferences-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  resize: vertical;
+  margin-bottom: 12px;
+}
+
+.submit-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #2980b9;
+}
+
+.recommend-results {
+  margin-top: 30px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.recommend-results ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recommend-results li {
+  background-color: #1f1f1f;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 8px;
+}
