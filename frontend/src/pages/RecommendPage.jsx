@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import RecommendationForm from "../components/RecommendationForm";
+import MultiMovieBox from "../components/MultiMovieBox";
 import "../index.css";
 
 export default function RecommendPage() {
@@ -38,6 +39,9 @@ export default function RecommendPage() {
       </h1>
 
       <RecommendationForm onSubmit={handleSubmit} />
+
+      {/* Multi-movie unified recommendation (frontend-only, reuses same endpoint) */}
+      <MultiMovieBox category={category} />
 
       {loading && <p>Loading recommendations...</p>}
 
