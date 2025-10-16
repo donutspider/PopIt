@@ -1,9 +1,41 @@
+:root {
+  --background-color-dark: #121212;
+  --text-color-dark: white;
+  --card-bg-dark: #1f1f1f;
+  --button-bg-dark: #3498db;
+  --button-hover-dark: #2980b9;
+
+  --background-color-light: #f0f0f0;
+  --text-color-light: #333;
+  --card-bg-light: #ffffff;
+  --button-bg-light: #3498db;
+  --button-hover-light: #2980b9;
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #121212;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
+
+body.dark {
+  --background-color: var(--background-color-dark);
+  --text-color: var(--text-color-dark);
+  --card-bg: var(--card-bg-dark);
+  --button-bg: var(--button-bg-dark);
+  --button-hover: var(--button-hover-dark);
+}
+
+body.light {
+  --background-color: var(--background-color-light);
+  --text-color: var(--text-color-light);
+  --card-bg: var(--card-bg-light);
+  --button-bg: var(--button-bg-light);
+  --button-hover: var(--button-hover-light);
+}
+
 
 .app-title {
   text-align: center;
@@ -81,7 +113,7 @@ body {
 }
 
 .submit-btn {
-  background-color: #3498db;
+  background-color: var(--button-bg);
   color: white;
   padding: 10px;
   font-size: 1.1rem;
@@ -92,7 +124,7 @@ body {
 }
 
 .submit-btn:hover {
-  background-color: #2980b9;
+  background-color: var(--button-hover);
 }
 
 .recommend-results {
@@ -107,8 +139,21 @@ body {
 }
 
 .recommend-results li {
-  background-color: #1f1f1f;
+  background-color: var(--card-bg);
   margin-bottom: 10px;
   padding: 12px;
   border-radius: 8px;
+}
+
+.theme-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--button-bg);
+  color: white;
+  z-index: 1000;
 }
