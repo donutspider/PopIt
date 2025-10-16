@@ -7,12 +7,12 @@ export default function RecommendPage() {
   const { category } = useParams();
   const [recommendations, setRecommendations] = useState([]);
 
-  const handleSubmit = async (preferences) => {
+  const handleSubmit = async (preferences, specifics) => {
     // Placeholder mock data — connect to backend later
     const mockResults = [
-      `${category} recommendation 1 based on "${preferences}"`,
-      `${category} recommendation 2 based on "${preferences}"`,
-      `${category} recommendation 3 based on "${preferences}"`,
+      `${category} recommendation 1 based on "${preferences}" and "${specifics}"`,
+      `${category} recommendation 2 based on "${preferences}" and "${specifics}"`,
+      `${category} recommendation 3 based on "${preferences}" and "${specifics}"`,
     ];
     setRecommendations(mockResults);
   };
